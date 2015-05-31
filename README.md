@@ -3,5 +3,5 @@ A set of auxiliar scripts for making backups on Linux
 
 ## Dependencies
 ```
-sudo apt-get install curl git
+sudo apt-get install curl git zip
 ```

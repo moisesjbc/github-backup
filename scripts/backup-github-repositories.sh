@@ -31,6 +31,10 @@ done
 # Return to root directory.
 cd ..
 
+# Compress backup directory
+zip -r ${BACKUP_DIR}.zip $BACKUP_DIR
+rm -rif $BACKUP_DIR
+
 # Reference:
 ###############################################################################
 # GitHub API v3
