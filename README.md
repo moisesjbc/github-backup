@@ -31,7 +31,7 @@ Simply run:
  github-backup.sh <username>
  ```
 
-where <username> is your Github username. For example, if you want to backup all of my repositories, simply run
+where &lt;username&bt; is your Github username. For example, if you want to backup all of my repositories, simply run
 
  ```
  github-backup.sh moisesjbc
