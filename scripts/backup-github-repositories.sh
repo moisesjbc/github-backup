@@ -19,6 +19,9 @@ do
 	git clone $REPOSITORY_CLONE_URL
 done
 
+# Remove temporal file.
+rm $GITHUB_USER_INFO_FILE
+
 # Reference:
 ###############################################################################
 # GitHub API v3
