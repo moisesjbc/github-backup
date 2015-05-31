@@ -19,7 +19,7 @@ REPOSITORIES_CLONE_URLS=$( sed -n 's/.*"clone_url": "\([a-z:_-\]\+\)".*/\1/p' ${
 # Clone every repository.
 for REPOSITORY_CLONE_URL in ${REPOSITORIES_CLONE_URLS}
 do
-	git clone $REPOSITORY_CLONE_URL
+	git clone --recursive $REPOSITORY_CLONE_URL
 done
 
 # Remove temporal file.
