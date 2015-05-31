@@ -16,7 +16,7 @@ mkdir $BACKUP_DIR
 cd $BACKUP_DIR
 
 # Access info about repositories.
-GITHUB_USER_INFO_FILE="$GITHUB_USER.git"
+GITHUB_USER_INFO_FILE="${GITHUB_USER}_github_info.json"
 curl -o ${GITHUB_USER_INFO_FILE} https://api.github.com/users/${GITHUB_USER}/repos
 
 # Retrieve repositories clone urls.
