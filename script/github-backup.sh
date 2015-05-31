@@ -35,6 +35,10 @@ cd ..
 zip -r ${BACKUP_DIR}.zip $BACKUP_DIR
 rm -rif $BACKUP_DIR
 
+# TODO:
+# - Accept numbers and other valid caracteres in clone urls (regex).
+# - Clone private repositories.
+
 # Reference:
 ###############################################################################
 # GitHub API v3
