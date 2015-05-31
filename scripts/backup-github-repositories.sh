@@ -9,6 +9,12 @@ fi
 # Retrieve Github user.
 GITHUB_USER=${1}
 
+# Create temporal dir
+CURRENT_DATETIME=$(date +"%d_%m_%Y_%H_%M_%S")
+BACKUP_DIR="github_repositories_backup_${GITHUB_USER}_${CURRENT_DATETIME}"
+mkdir $BACKUP_DIR
+cd $BACKUP_DIR
+
 # Access info about repositories.
 GITHUB_USER_INFO_FILE="$GITHUB_USER.git"
 curl -o ${GITHUB_USER_INFO_FILE} https://api.github.com/users/${GITHUB_USER}/repos
@@ -24,6 +30,9 @@ done
 
 # Remove temporal file.
 rm $GITHUB_USER_INFO_FILE
+
+# Return to root directory.
+cd ..
 
 # Reference:
 ###############################################################################
@@ -44,4 +53,7 @@ rm $GITHUB_USER_INFO_FILE
 #
 # Bash printf syntax basics - LinuxConfig.org
 # http://linuxconfig.org/bash-printf-syntax-basics-with-examples
+#
+# Append Current Date To Filename in Bash Shell - nixCraft
+# http://www.cyberciti.biz/faq/unix-linux-appleosx-bsd-shell-appending-date-to-filename/
 ###############################################################################
