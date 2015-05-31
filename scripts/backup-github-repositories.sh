@@ -28,9 +28,6 @@ do
 	git clone --recursive $REPOSITORY_CLONE_URL
 done
 
-# Remove temporal file.
-rm $GITHUB_USER_INFO_FILE
-
 # Return to root directory.
 cd ..
 
