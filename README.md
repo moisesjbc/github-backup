@@ -1,5 +1,6 @@
-# backup-utilities
-A set of auxiliar scripts for making backups on Linux
+# Github Backup
+
+A bash script for cloning all the Github repositories of a given user
 
 ## Dependencies
 ```
