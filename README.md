@@ -22,3 +22,17 @@ git clone https://github.com/moisesjbc/github-backup.git
 cd github-backup
 ./install.sh
 ```
+
+## Using the script
+
+Simply run:
+
+```
+github-backup.sh <username>
+```
+
+where <username> is your Github username. For example, if you want to backup all of my repositories, simply run
+
+```
+github-backup.sh moisesjbc
+```
