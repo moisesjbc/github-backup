@@ -6,9 +6,12 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
+# Retrieve Github user.
+GITHUB_USER=${1}
+
 # Access info about repositories.
-GITHUB_USER_INFO_FILE="${1}.git"
-curl -o ${GITHUB_USER_INFO_FILE} https://api.github.com/users/${1}/repos
+GITHUB_USER_INFO_FILE="$GITHUB_USER.git"
+curl -o ${GITHUB_USER_INFO_FILE} https://api.github.com/users/${GITHUB_USER}/repos
 
 # Retrieve repositories clone urls.
 REPOSITORIES_CLONE_URLS=$( sed -n 's/.*"clone_url": "\([a-z:_-\]\+\)".*/\1/p' ${GITHUB_USER_INFO_FILE} )
