@@ -1,6 +1,6 @@
 # Github Backup
 
-A bash script for cloning all the Github repositories of a given user
+A bash script for cloning all the Github **public** repositories of a given user
 
 ## Installing the script (Tested on Ubuntu 14.04)
 
